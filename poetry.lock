@@ -447,6 +447,16 @@ files = [
 ]
 
 [[package]]
+name = "dash-mantine-react-table"
+version = "0.0.1"
+description = "The right datagrid for Dash when using Dash Mantine Components."
+optional = false
+python-versions = "*"
+files = [
+    {file = "dash_mantine_react_table-0.0.1-py3-none-any.whl", hash = "sha256:d31b86c6579f8f4a5d1a8ecb36ef15d9c074293cba29b6d7f65c4af01dfcec0e"},
+]
+
+[[package]]
 name = "dash-table"
 version = "5.0.0"
 description = "Dash table"
@@ -1936,4 +1946,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "ac77c258da71f71c925935f6e4feef7533f6e638fc23814367077b95fd691bff"
+content-hash = "46e7f53bda2ce19f00874b6c4152418692a2aec68d9c7ab94f13745d0b7b70cd"
