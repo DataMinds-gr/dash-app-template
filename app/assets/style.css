@@ -53,11 +53,22 @@
 .footer {
     position: fixed;
     bottom: 1rem;
-    left: 0;
-    right: 0;
+    right: 1rem;
     height: 2rem;
     padding: 0.5rem 1rem;
     background-color: white;
     z-index: 1050;
     transition: height 0.1s ease-in-out;
+}
+
+.page-title {
+    color: #236DE6;
+}
+
+.sidebar-title {
+    color: #236DE6;
+}
+
+.sidebar-link {
+    /* color: #236DE6; */
 }

@@ -12,6 +12,6 @@ import dash_mantine_components as dmc
 # ------------------------
 layout = html.Div(
     [
-        dmc.Title("Settings", order=2, color="cyan"),
+        dmc.Title("Settings", order=2,  className="page-title"),
     ]
 )

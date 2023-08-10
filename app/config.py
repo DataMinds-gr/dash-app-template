@@ -9,6 +9,9 @@ app = Dash(__name__)
 server = app.server
 app.config.suppress_callback_exceptions = True
 
+# Set the app title
+app.title = "DataMinds - Dash App"
+
 # Authentification
 with open('.env', 'r') as file:
     content = file.read()

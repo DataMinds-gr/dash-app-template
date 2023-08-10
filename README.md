@@ -2,12 +2,47 @@
 
 This is a template project for creating web applications using Dash by Plotly. Dash is a powerful Python framework for building interactive web applications with ease. This template provides a basic structure to get you started quickly.
 
+The purpose of this project is to demonstrate different aspects of App Development using Dash by Plotly in an end-to-end manner. The project is structured in a way that it can be used as a template for creating new projects.
+
+> Use the final app as a reference / DEMO for presentation in prospect clients.
+
 ## Resources
 
 1. [Dash by Plotly](https://dash.plotly.com/)
 2. [Dash Mantine Components](https://www.dash-mantine-components.com/)
 3. [Structuring a large Dash application - best practices to follow](https://community.plotly.com/t/structuring-a-large-dash-application-best-practices-to-follow/62739)
 4. [Dash App Structure](https://github.com/bradley-erickson/dash-app-structure)
+
+---
+
+## Features
+
+1. How to structure a complex multipage Dash by Plotly App
+
+2. How to use **PyEnv + Poetry** for dependency management
+
+3. How to write and run tests using `pytest`
+
+4. How to use **Dash Mantine Components** and **CSS** to style a Dash App
+
+5. How to setup User Authenication
+
+6. How to setup and use a Database
+
+7. How to **Dockerize** the app and deploy to **GCP**
+
+8. How to setup CI/CD using **GitHub Actions**
+
+## Use cases
+
+The repository includes sample pages for the following uses cases:
+
+1. Analytics Dashboard
+2. Machine Learning Prediction UI
+3. Chatbot
+4. About Page
+5. Contact Page
+6. Notifications Functionality
 
 ---
 
