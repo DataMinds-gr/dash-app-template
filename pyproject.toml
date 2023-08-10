@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["Nontas Georgitsaros <x.georgitsaros@gmail.com>"]
 readme = "README.md"
-packages = [{include = "dash_app_template"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -15,6 +14,8 @@ seaborn = "^0.12.2"
 dash-table = "^5.0.0"
 dash-auth = "^2.0.0"
 dash-mantine-components = "^0.12.1"
+dash-iconify = "^0.1.2"
+python-dotenv = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.25.1"
