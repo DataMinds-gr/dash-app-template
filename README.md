@@ -9,9 +9,14 @@ The purpose of this project is to demonstrate different aspects of App Developme
 ## Resources
 
 1. [Dash by Plotly](https://dash.plotly.com/)
+
 2. [Dash Mantine Components](https://www.dash-mantine-components.com/)
+
 3. [Structuring a large Dash application - best practices to follow](https://community.plotly.com/t/structuring-a-large-dash-application-best-practices-to-follow/62739)
+
 4. [Dash App Structure](https://github.com/bradley-erickson/dash-app-structure)
+
+5. Mantine UI Library <https://mantine.dev/>, <https://ui.mantine.dev/>
 
 ---
 
