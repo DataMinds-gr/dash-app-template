@@ -33,6 +33,8 @@ The purpose of this project is to demonstrate different aspects of App Developme
 
 8. How to setup CI/CD using **GitHub Actions**
 
+9. How to use **Pre-commit**, **Black**, **Flake** and **Isort** for code formatting.
+
 ## Use cases
 
 The repository includes sample pages for the following uses cases:

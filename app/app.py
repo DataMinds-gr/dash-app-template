@@ -13,6 +13,7 @@ from config import app
 
 # Import components
 from components.navbar import sidebar as sidebar
+from components.header import page_header as page_header
 from components.footer import footer as footer
 
 # Import pages
@@ -26,7 +27,7 @@ import pages.page_404_not_found as page_404_not_found
 # Import callbacks
 import callbacks.navbar_callbacks
 # import callbacks.page_1_callbacks
-# import callbacks.page_2_callbacks
+import callbacks.page_2_callbacks
 # import callbacks.page_3_callbacks
 # import callbacks.page_4_callbacks
 # import callbacks.page_5_callbacks
@@ -35,6 +36,7 @@ import callbacks.navbar_callbacks
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     sidebar,
+    html.Div(page_header),
     html.Div(id='page-content', className="content"),
     html.Div(footer, className="footer")
 ])

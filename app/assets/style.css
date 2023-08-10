@@ -51,14 +51,11 @@
 }
 
 .footer {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    height: 2rem;
-    padding: 0.5rem 1rem;
-    background-color: white;
-    z-index: 1050;
-    transition: height 0.1s ease-in-out;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
 }
 
 .page-title {
@@ -71,4 +68,18 @@
 
 .sidebar-link {
     /* color: #236DE6; */
+}
+
+.header {
+    margin-left: 5rem;
+    background-color: #236DE6;
+}
+
+.header-button {
+    background-color: #236DE6;
+    margin-top: 5px;
+}
+
+.header-button:hover {
+    background-color: #236DE6;
 }
