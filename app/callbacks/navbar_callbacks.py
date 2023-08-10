@@ -12,15 +12,15 @@ from dash import Input, Output
     Input("url", "pathname"),
 )
 def set_active_page(pathname):
-    if pathname == "/home":
+    if pathname == "/":
         return True, False, False, False, False
-    elif pathname == "/analytics":
+    elif pathname == "/page-2-analytics":
         return False, True, False, False, False
-    elif pathname == "/settings":
+    elif pathname == "/page-3-settings":
         return False, False, True, False, False
-    elif pathname == "/about":
+    elif pathname == "/page-4-about":
         return False, False, False, True, False
-    elif pathname == "/contact":
+    elif pathname == "/page-5-contact":
         return False, False, False, False, True
     else:
         return False, False, False, False, False

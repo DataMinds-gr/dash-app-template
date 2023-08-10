@@ -24,6 +24,7 @@ import pages.page_5_contact as page_5_contact
 import pages.page_404_not_found as page_404_not_found
        
 # Import callbacks
+import callbacks.navbar_callbacks
 # import callbacks.page_1_callbacks
 # import callbacks.page_2_callbacks
 # import callbacks.page_3_callbacks
@@ -34,8 +35,8 @@ import pages.page_404_not_found as page_404_not_found
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     sidebar,
-    html.Div(id='page-content'),
-    footer
+    html.Div(id='page-content', className="content"),
+    html.Div(footer, className="footer")
 ])
 
 

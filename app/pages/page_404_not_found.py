@@ -10,7 +10,7 @@ import dash_mantine_components as dmc
 
 # Define the page layout
 # ------------------------
-layout = dmc.Container(
+layout = html.Div(
     [
         dmc.Title("Page Not Found", order=2, color="cyan"),
     ]

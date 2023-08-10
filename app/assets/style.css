@@ -49,3 +49,15 @@
     margin-right: 2rem;
     padding: 2rem 1rem;
 }
+
+.footer {
+    position: fixed;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    height: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    z-index: 1050;
+    transition: height 0.1s ease-in-out;
+}
