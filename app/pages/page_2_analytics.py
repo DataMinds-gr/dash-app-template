@@ -9,12 +9,12 @@ from dash import html, dcc
 import dash_mantine_components as dmc
 import plotly.express as px
 
-from components.ui_cards import create_card
+from components.ui_cards import simple_card
 from utils.graphs import line_plot, pie_plot
 
 
 # Create a rows with cards
-card1 = card2 = card3 = card4 = create_card()
+card1 = card2 = card3 = card4 = simple_card()
 cards_row = dmc.Grid(
     children=[
         dmc.Col(card1, span=3),

@@ -1,7 +1,7 @@
 /* This creates a skinny side bar fixed to the left of the page */
 .sidebar {
     position: fixed;
-    top: 0;
+    top: 60px;
     left: 0;
     bottom: 0;
     width: 4rem;
@@ -71,7 +71,7 @@
 }
 
 .header {
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
     background-color: #236DE6;
 }
 

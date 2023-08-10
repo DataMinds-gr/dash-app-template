@@ -1,3 +1,11 @@
+######################
+#                    #
+#   Plotly Graphs    #
+#                    #
+######################
+
+
+
 # Import libraries
 import plotly.graph_objects as go
 
@@ -83,6 +91,39 @@ def pie_plot(df, labels, values, title):
             size=18,
             color="#7f7f7f"
         )
+    )
+
+    return fig
+
+
+def percentage_ring_plot(perc:int):
+
+    fig = go.Figure()
+
+    fig.add_trace(
+        go.Pie(
+            labels=["A", "B"],
+            values=[perc, 100-perc])
+    )
+
+    # Use `hole` to create a donut-like pie chart
+    fig.update_traces(
+        hole=.9,
+        hoverinfo='none',
+        textinfo='none',
+        marker=dict(colors=["#228be6", "#f0f3f5"]),
+    )
+
+    fig.update_layout(
+        annotations=[
+            dict(text=f'<b>{perc}%</b> <br>Completed',
+                 x=0.5, y=0.5, 
+                 # font_size=20
+                 showarrow=False)],
+        showlegend=False,
+        margin=dict(t=40, b=20, l=20, r=20),
+        width=160,
+        height=160,
     )
 
     return fig

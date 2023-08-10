@@ -19,6 +19,7 @@ python-dotenv = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.25.1"
+nbformat = "^5.9.2"
 
 [build-system]
 requires = ["poetry-core"]
