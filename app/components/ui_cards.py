@@ -8,6 +8,7 @@
 # Import libraries
 from dash import dcc, html
 import dash_mantine_components as dmc
+from dash_iconify import DashIconify
 from utils.graphs import percentage_ring_plot
 
 
@@ -26,7 +27,7 @@ def simple_card(title: str = "Title per hour", number: int = 10100):
 
 
 # Create a informative card component
-def numbers_and_rings_card(
+def numbers_and_ring_card(
         title: str = "Project Tasks",
         num1: int = 100, num2: int = 70, num3: int = 30,
         perc: int = 87
@@ -76,9 +77,55 @@ def numbers_and_rings_card(
 
     return card
 
+# Card with number and comparison
+def numbers_and_comparison_card(
+        title: str = "Revenue",
+        num: int = 13456,
+        perc: int = 87
+):
+    if perc > 0:
+        col = "green"
+        icon = DashIconify(icon="mdi:arrow-top-right", color="green", width=25, height=25)
+        msg = "increase compared to last month"
+    elif perc < 0:
+        col = "red"
+        icon = DashIconify(icon="mdi:arrow-bottom-right", color="red", width=30, height=30)
+        msg = "decrease compared to last month"
+    else:
+        col = "grey"
+        icon = DashIconify(icon="mdi:arrow-right", color="grey", width=20, height=20)
+        msg = "no change compared to last month"
+
+    info_stack = dmc.Stack(
+        [
+            dmc.Title(title, order=5, size="sm"),
+            dmc.Title(f"{num:,}$", order=2),
+            dmc.Group([
+                dmc.Text(f"{perc}%", color=col, size="sm"),
+                dmc.Text(msg, color="grey", size="sm"),
+            ], spacing=2)
+        ]
+    )
+
+    card = dmc.Card(
+        [
+            dmc.Grid(
+                [
+                    dmc.Col(info_stack, span=10),
+                    dmc.Col(icon, span=2, mt="lg"),
+                ]
+            )
+        ],
+        withBorder=True,
+        shadow="sm",
+        radius="md",
+    )
+
+    return card
+
 
 # Create a complex card component
-def complex_card():
+def complex_card_with_image():
     card = dmc.Card(
         children=[
             dmc.CardSection(
