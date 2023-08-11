@@ -18,7 +18,7 @@ data = px.data.gapminder()
 # ------------------------
 layout = html.Div(
     [
-        dmc.Title("Settings", order=2,  className="page-title"),
+        dmc.Title("Settings", order=2),
 
         html.Div(
             [

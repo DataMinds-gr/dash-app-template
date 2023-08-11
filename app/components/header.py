@@ -9,44 +9,42 @@ import dash_mantine_components as dmc
 from dash_iconify import DashIconify
 
 
-# Create a button group with icons
-single_button_with_icon = dmc.Button(
-    DashIconify(icon="bx:search", color="white", width=40),
-    className="header-button"
-)
+# Create app logo element
+app_logo = dmc.Image(src="/assets/LOGO-removebg.png",
+                    alt="logo", width=200, height=50)
 
 three_buttons_group_with_icons = dmc.ButtonGroup(
     children=[
         dmc.Button(
-            DashIconify(icon="ph:bell", color="white", width=35),
-            className="header-button"
+            DashIconify(icon="ph:bell", color="white", width=25, height=25),
+            # className="header-button"
         ),
 
         dmc.Button(
-            DashIconify(icon="mdi:envelope-outline", color="white", width=35),
-            className="header-button"
+            DashIconify(icon="mdi:envelope-outline", color="white", width=25, height=25),
+            # className="header-button"
         ),
 
         dmc.Button(
-            DashIconify(icon="charm:person", color="white", width=35),
-            className="header-button"
+            DashIconify(icon="charm:person", color="white", width=25, height=25),
+            # className="header-button"
         )
     ])
 
 
 # Create a page header
 page_header = dmc.Header(
-    height=60,
+    height="3.5rem",
     children=[
         dmc.Grid(
             [
-                dmc.Col(single_button_with_icon ,span=10),
+                dmc.Col(app_logo,span=10),
                 dmc.Col(three_buttons_group_with_icons, span=2),
             ],
             gutter="xl",
         )
     ],
-    className="header",
+    fixed=True,
 ),
 
 

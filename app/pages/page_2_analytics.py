@@ -95,7 +95,7 @@ line_plot_and_pie_plot = dmc.Grid(
 # ------------------------
 layout = html.Div(
     [
-        dmc.Title("Analytics", order=2, className="page-title"),
+        dmc.Title("Analytics", order=2),
         dmc.Container(
             children=[
                 cards_row,

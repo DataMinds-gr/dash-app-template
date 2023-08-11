@@ -17,8 +17,13 @@ from components.ui_cards import (complex_card_with_image,
 # ------------------------
 layout = html.Div(
     [
-        dmc.Title("Home", order=2, className="page-title"),
 
+        dmc.Container(
+            [
+                dmc.Title("Home", order=1),
+            ]
+        ),
+        
         dmc.Container(
             children=[
                 dmc.Grid(

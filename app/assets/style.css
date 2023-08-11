@@ -4,8 +4,8 @@
     top: 60px;
     left: 0;
     bottom: 0;
-    width: 4rem;
-    padding: 2rem 1rem;
+    width: 3.5rem;
+    padding: 1rem 0rem;
     background-color: white;
     z-index: 1050;
     transition: width 0.1s ease-in-out;
@@ -43,11 +43,12 @@
     opacity: 1;
 }
 
-/* position the content relative to the collapsed sidebar */
+/* position the content relative to the collapsed sidebar and header */
 .content {
     margin-left: 7rem;
     margin-right: 2rem;
-    padding: 2rem 1rem;
+    padding-top: 4rem;
+    /* padding: 2rem 1rem; */
 }
 
 .footer {
@@ -56,30 +57,4 @@
     left: 0;
     width: 100%;
     height: 2.5rem;
-}
-
-.page-title {
-    color: #236DE6;
-}
-
-.sidebar-title {
-    color: #236DE6;
-}
-
-.sidebar-link {
-    /* color: #236DE6; */
-}
-
-.header {
-    /* margin-left: 5rem; */
-    background-color: #236DE6;
-}
-
-.header-button {
-    background-color: #236DE6;
-    margin-top: 5px;
-}
-
-.header-button:hover {
-    background-color: #236DE6;
 }

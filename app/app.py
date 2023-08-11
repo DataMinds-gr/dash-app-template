@@ -7,6 +7,7 @@
 # Import the required libraries
 from dash import html, dcc
 from dash.dependencies import Input, Output
+import dash_mantine_components as dmc
 
 # Import app
 from config import app
@@ -23,7 +24,7 @@ import pages.page_3_settings as page_3_settings
 import pages.page_4_about as page_4_about
 import pages.page_5_contact as page_5_contact
 import pages.page_404_not_found as page_404_not_found
-       
+
 # Import callbacks
 import callbacks.navbar_callbacks
 # import callbacks.page_1_callbacks
@@ -33,13 +34,40 @@ import callbacks.page_2_callbacks
 # import callbacks.page_5_callbacks
 
 # Define the app layout
-app.layout = html.Div([
+app_layout = html.Div([
+
     dcc.Location(id='url', refresh=False),
+
     sidebar,
+
     html.Div(page_header),
+
     html.Div(id='page-content', className="content"),
+
     html.Div(footer, className="footer")
-])
+
+], style = {"background-color": "#F8F9FA"})
+
+# Define the app theme
+app.layout = dmc.MantineProvider(
+    theme={
+        "primaryColor": "indigo",
+        "components": {
+            "Header": {"styles": {"root": {
+                "backgroundColor": dmc.theme.DEFAULT_COLORS.get("indigo")[6],
+                "padding-top": "0.4rem",
+            }}
+            },
+            # "Button": {"styles": {"root": {"fontWeight": 400}}},
+            # "Alert": {"styles": {"title": {"fontWeight": 500}}},
+            # "AvatarGroup": {"styles": {"truncated": {"fontWeight": 500}}},
+        },
+    },
+    inherit=True,
+    withGlobalStyles=True,
+    withNormalizeCSS=True,
+    children=app_layout
+)
 
 
 # Define the app-wrapper callback

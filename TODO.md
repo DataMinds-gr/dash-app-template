@@ -1,7 +1,7 @@
 # TODO
 
+[] Replace App title with user info card
+
 [] Fix Footer Aligment
 
-[] Fix Header span
-
-[] Fix Header responsivness
+[] Add Logout on the bottom

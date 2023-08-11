@@ -55,9 +55,8 @@ The repository includes sample pages for the following uses cases:
 
 1. [Clean Dashboard](docs/app-community-showcase/clean-dashboard.png)
 2. [Info List](docs/app-community-showcase/info-list.png)
-3. [Dashboard-example](docs/app-community-showcase/dashboard-example-app.png)
+3. [Dashboard-example](docs/app-community-showcase/dashboard-example-app.png) <-- Use it for Water AI.
 4. [Team Presentation](docs/app-community-showcase/team_presentation.png)
-
 
 ---
 

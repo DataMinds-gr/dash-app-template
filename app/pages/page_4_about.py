@@ -12,7 +12,7 @@ import dash_mantine_components as dmc
 # ------------------------
 layout = html.Div(
     [
-        dmc.Title("About", order=2,  className="page-title"),
+        dmc.Title("About", order=2),
 
         dmc.Container(
             [
