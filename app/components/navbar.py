@@ -19,33 +19,7 @@ def get_icon(icon):
 # Create the navbar
 sidebar = html.Div(
     [
-        html.Div(
-            [
-                dmc.Card(
-                    [
-                        dmc.Group(
-                            [
-                                DashIconify(icon="iconoir:brain-research",
-                                            width=20, height=20, color="grey"),
-                                dmc.Container(
-                                    [
-                                        dmc.Title(
-                                            "Panos Papaemmanouil", order=4),
-                                        dmc.Title("Data Scientist", order=6),
-                                        dmc.Text("panos@dataminds.gr",
-                                                 color="gray"),
-                                    ]
-                                )
-                            ]
-                        )
-                    ],
-                    withBorder=True,
-                    shadow="sm",
-                    radius="md",
-                )
-            ],
-            className="sidebar-header",
-        ),
+        
         dmc.Navbar(
             [
                 dmc.NavLink(
@@ -84,6 +58,34 @@ sidebar = html.Div(
                     style={"margin-top": "0.5rem"}
                 )
             ],
+        ),
+        dmc.Space(h="20rem"),
+        html.Div(
+            [
+                dmc.Card(
+                    [
+                        dmc.Group(
+                            [
+                                DashIconify(icon="iconoir:brain-research",
+                                            width=20, height=20, color="grey"),
+                                dmc.Container(
+                                    [
+                                        dmc.Title(
+                                            "Panos Papaemmanouil", order=4),
+                                        dmc.Title("Data Scientist", order=6),
+                                        dmc.Text("panos@dataminds.gr",
+                                                 color="gray"),
+                                    ]
+                                )
+                            ]
+                        )
+                    ],
+                    withBorder=True,
+                    shadow="sm",
+                    radius="md",
+                )
+            ],
+            className="sidebar-header",
         ),
     ],
     className="sidebar",
