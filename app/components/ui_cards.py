@@ -85,7 +85,8 @@ def numbers_and_comparison_card(
 ):
     if perc > 0:
         col = "green"
-        icon = DashIconify(icon="mdi:arrow-top-right", color="green", width=25, height=25)
+        icon = DashIconify(icon="mdi:arrow-top-right", color="green", width=25, height=25,
+                            style={"background-color": "#f8f9fa", "border-radius": "10%", "padding": "5px"})
         msg = "increase compared to last month"
     elif perc < 0:
         col = "red"
