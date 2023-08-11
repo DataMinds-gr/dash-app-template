@@ -56,7 +56,21 @@ sidebar = html.Div(
                     label=dmc.Title("Contact", order=5),
                     icon=get_icon(icon="ic:outline-email"),
                     style={"margin-top": "0.5rem"}
-                )
+                ),
+                dmc.NavLink(
+                    id="chat",
+                    href="/page-6-chat",
+                    label=dmc.Title("Chat", order=5),
+                    icon=get_icon(icon="ic:outline-chat"),
+                    style={"margin-top": "0.5rem"}
+                ),
+                dmc.NavLink(
+                    id="ml",
+                    href="/page-7-ml",
+                    label=dmc.Title("Machine Learning", order=5),
+                    icon=get_icon(icon="eos-icons:ai"),
+                    style={"margin-top": "0.5rem"}
+                ),
             ],
         ),
         dmc.Space(h="20rem"),

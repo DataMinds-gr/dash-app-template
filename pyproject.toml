@@ -17,6 +17,7 @@ dash-mantine-components = "^0.12.1"
 dash-iconify = "^0.1.2"
 python-dotenv = "^1.0.0"
 dash-mantine-react-table = "^0.0.1"
+openai = "^0.27.8"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.25.1"

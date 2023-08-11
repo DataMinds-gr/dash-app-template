@@ -49,3 +49,5 @@
     padding-top: 4rem;
     background-color: #F8F9FA;
 }
+
+body {overflow-x: hidden;}

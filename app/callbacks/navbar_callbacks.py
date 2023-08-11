@@ -1,3 +1,9 @@
+########################
+#                      #
+#   Navbar Callbacks   #
+#                      #
+########################
+
 # Import libraries
 from config import app
 from dash import Input, Output
@@ -9,18 +15,24 @@ from dash import Input, Output
     Output("settings", "active"),
     Output("about", "active"),
     Output("contact", "active"),
+    Output("chat", "active"),
+    Output("ml", "active"),
     Input("url", "pathname"),
 )
 def set_active_page(pathname):
     if pathname == "/":
-        return True, False, False, False, False
+        return True, False, False, False, False, False, False
     elif pathname == "/page-2-analytics":
-        return False, True, False, False, False
+        return False, True, False, False, False, False, False
     elif pathname == "/page-3-settings":
-        return False, False, True, False, False
+        return False, False, True, False, False, False, False
     elif pathname == "/page-4-about":
-        return False, False, False, True, False
+        return False, False, False, True, False, False, False
     elif pathname == "/page-5-contact":
-        return False, False, False, False, True
+        return False, False, False, False, True, False, False
+    elif pathname == "/page-6-chat":
+        return False, False, False, False, False, True, False
+    elif pathname == "/page-7-ml":
+        return False, False, False, False, False, False, True
     else:
-        return False, False, False, False, False
+        return False, False, False, False, False, False, False

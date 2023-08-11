@@ -56,5 +56,5 @@ layout = html.Div(
                 )
             ]
         )
-    ],
+    ], style = {"height":"90vh"}
 )

@@ -23,6 +23,8 @@ import pages.page_2_analytics as page_2_analytics
 import pages.page_3_settings as page_3_settings
 import pages.page_4_about as page_4_about
 import pages.page_5_contact as page_5_contact
+import pages.page_6_chat as page_6_chat
+import pages.page_7_machine_learning as page_7_machine_learning
 import pages.page_404_not_found as page_404_not_found
 
 # Import callbacks
@@ -32,6 +34,9 @@ import callbacks.page_2_callbacks
 # import callbacks.page_3_callbacks
 # import callbacks.page_4_callbacks
 # import callbacks.page_5_callbacks
+import callbacks.page_6_callbacks
+import callbacks.page_7_callbacks
+
 
 # Define the app layout
 app_layout = html.Div([
@@ -85,6 +90,10 @@ def display_page(pathname):
         return page_4_about.layout
     elif pathname == '/page-5-contact':
         return page_5_contact.layout
+    elif pathname == '/page-6-chat':
+        return page_6_chat.layout
+    elif pathname == '/page-7-ml':
+        return page_7_machine_learning.layout
     else:
         return page_404_not_found.layout
 
