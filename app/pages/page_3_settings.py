@@ -23,7 +23,7 @@ layout = html.Div(
         html.Div(
             [
                 dash_mantine_react_table(data)
-            ]
+            ], style={"margin-left": "20px", "margin-right": "20px"}
         )
     ]
 )

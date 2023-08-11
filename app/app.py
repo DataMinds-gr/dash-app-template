@@ -44,9 +44,9 @@ app_layout = html.Div([
 
     html.Div(id='page-content', className="content"),
 
-    html.Div(footer, className="footer")
+    html.Div(footer, "sticky-footer")
 
-], style = {"background-color": "#F8F9FA"})
+])
 
 # Define the app theme
 app.layout = dmc.MantineProvider(

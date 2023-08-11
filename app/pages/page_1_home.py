@@ -58,7 +58,5 @@ layout = html.Div(
                 )
             ], style={"margin-top": "20px"}, size="xl"
         ),
-
-
     ]
 )

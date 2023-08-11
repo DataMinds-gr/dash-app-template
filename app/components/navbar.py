@@ -66,15 +66,14 @@ sidebar = html.Div(
                     [
                         dmc.Group(
                             [
-                                DashIconify(icon="iconoir:brain-research",
-                                            width=20, height=20, color="grey"),
+                                # DashIconify(icon="iconoir:brain-research",
+                                #             width=15, height=15, color="grey"),
                                 dmc.Container(
                                     [
                                         dmc.Title(
                                             "Panos Papaemmanouil", order=4),
-                                        dmc.Title("Data Scientist", order=6),
-                                        dmc.Text("panos@dataminds.gr",
-                                                 color="gray"),
+                                        dmc.Text("Data Scientist"),
+                                        dmc.Text("panos@dataminds.gr", color="gray"),
                                     ]
                                 )
                             ]
@@ -83,10 +82,13 @@ sidebar = html.Div(
                     withBorder=True,
                     shadow="sm",
                     radius="md",
+                    p=1,
                 )
             ],
             className="sidebar-header",
         ),
+
+        dmc.Button("Logout", color="red", variant="outline", size="sm", mt=20, className="sidebar-header")
     ],
     className="sidebar",
 )
