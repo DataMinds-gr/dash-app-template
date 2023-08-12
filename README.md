@@ -61,9 +61,9 @@ The repository includes sample pages for the following uses cases:
 ## UI Guidelines
 
 1. Header should be on the top, fixed and have a logo. Can be white or colored.
-2. Sidebar should be on the left side and open.
-3. Gray background.
-4. Use a light color for the main content.
+2. Sidebar should be on the left side. It can stay open or closed.
+3. The main content should be on the middle-right side of the screen and have a lightgrey background.
+4. Use cards and light color for the main content to distinguish from the background and make it more readable.
 
 ---
 

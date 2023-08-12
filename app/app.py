@@ -41,7 +41,7 @@ import callbacks.page_7_callbacks
 # Define the app layout
 app_layout = html.Div([
 
-    dcc.Location(id='url', refresh=False),
+    dcc.Location(id='url', refresh=True),
 
     dcc.Store(id="store-conversation", data=""),
 
