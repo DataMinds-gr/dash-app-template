@@ -15,15 +15,15 @@ app_logo = dmc.Image(src="/assets/LOGO-removebg.png", alt="logo", width=200, hei
 three_buttons_group_with_icons = dmc.ButtonGroup(
     children=[
         dmc.Button(
-            DashIconify(icon="ph:bell", width=25, height=25),
+            DashIconify(icon="ph:bell", color="white", width=25, height=25),
         ),
 
         dmc.Button(
-            DashIconify(icon="mdi:envelope-outline", width=25, height=25),
+            DashIconify(icon="mdi:envelope-outline", color="white", width=25, height=25),
         ),
 
         dmc.Button(
-            DashIconify(icon="charm:person", width=25, height=25),
+            DashIconify(icon="charm:person",color="white", width=25, height=25),
         )
     ])
 
