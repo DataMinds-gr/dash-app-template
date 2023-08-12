@@ -43,6 +43,8 @@ app_layout = html.Div([
 
     dcc.Location(id='url', refresh=False),
 
+    dcc.Store(id="store-conversation", data=""),
+
     sidebar,
 
     html.Div(page_header),

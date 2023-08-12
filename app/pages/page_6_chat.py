@@ -8,6 +8,8 @@
 from dash import dcc, html, Input, Output, State
 import dash_mantine_components as dmc
 
+# Load components (temp)
+from components.ui_textbox import textbox
 
 app_header = dmc.Container(
     [
@@ -48,8 +50,13 @@ controls = dmc.Grid(
 layout = html.Div(
     [
         app_header,
-        dcc.Store(id="store-conversation", data=""),
         conversation,
+        html.Div(
+            [
+                textbox("Hello Panos!", box="AI", name="Philippe"),
+                textbox("Hello Philippe!", box="user", name="Panos")
+            ]
+        ),
         controls,
         dmc.Loader(id="loading-component"),
     ],  style = {"padding-bottom": "20px"}

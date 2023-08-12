@@ -4,8 +4,6 @@
 #                          #
 ############################
 
-print("Importing page_3_callbacks.py")
-
 # Import libraries
 from config import app
 from dash import Input, Output, State

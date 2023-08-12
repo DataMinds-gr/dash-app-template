@@ -9,6 +9,10 @@ import dash_mantine_components as dmc
 from dash import html
 
 def textbox(text, box="AI", name="Philippe"):
+    """
+    Create a textbox for the chatbot conversation.
+    """
+
     text = text.replace(f"{name}:", "").replace("You:", "")
     
     style = {
@@ -39,9 +43,6 @@ def textbox(text, box="AI", name="Philippe"):
             },
         )
         textbox = dmc.Card(text, style=style)
-        
-        print("==== TEXTBOX ====")
-        print(textbox)
 
         return html.Div([thumbnail, textbox])
     else:
