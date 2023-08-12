@@ -58,6 +58,13 @@ The repository includes sample pages for the following uses cases:
 3. [Dashboard-example](docs/app-community-showcase/dashboard-example-app.png) <-- Use it for Water AI.
 4. [Team Presentation](docs/app-community-showcase/team_presentation.png)
 
+## UI Guidelines
+
+1. Header should be on the top, fixed and have a logo. Can be white or colored.
+2. Sidebar should be on the left side and open.
+3. Gray background.
+4. Use a light color for the main content.
+
 ---
 
 ## Getting Started
