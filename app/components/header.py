@@ -10,24 +10,20 @@ from dash_iconify import DashIconify
 
 
 # Create app logo element
-app_logo = dmc.Image(src="/assets/LOGO-removebg.png",
-                    alt="logo", width=200, height=50)
+app_logo = dmc.Image(src="/assets/LOGO-removebg.png", alt="logo", width=200, height="3.5rem")
 
 three_buttons_group_with_icons = dmc.ButtonGroup(
     children=[
         dmc.Button(
-            DashIconify(icon="ph:bell", color="white", width=25, height=25),
-            # className="header-button"
+            DashIconify(icon="ph:bell", width=25, height=25),
         ),
 
         dmc.Button(
-            DashIconify(icon="mdi:envelope-outline", color="white", width=25, height=25),
-            # className="header-button"
+            DashIconify(icon="mdi:envelope-outline", width=25, height=25),
         ),
 
         dmc.Button(
-            DashIconify(icon="charm:person", color="white", width=25, height=25),
-            # className="header-button"
+            DashIconify(icon="charm:person", width=25, height=25),
         )
     ])
 
