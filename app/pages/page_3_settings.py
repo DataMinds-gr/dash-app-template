@@ -24,6 +24,15 @@ layout = html.Div(
             [
                 dash_mantine_react_table(data)
             ], style={"margin-left": "20px", "margin-right": "20px"}
+        ),
+
+        html.Br(),
+
+        dmc.Container(
+            [
+                dmc.Button("Click me!", id = "page3-button"),
+                dmc.Text("Button clicked 0 times", id="page3-button-clicks")
+            ]
         )
     ]
 )

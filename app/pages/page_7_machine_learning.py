@@ -10,6 +10,9 @@ import dash_mantine_components as dmc
 from dash_iconify import DashIconify
 from datetime import date
 
+# Import components
+from components.ui_modal import modal
+
 # Generate Apps Header
 header = html.Div([
     dmc.Container(
@@ -39,12 +42,12 @@ tooltip = dmc.Tooltip(
     label="Enter the Prediction Parameters to generate a prediction",
     position="top",
     children=tooltip_icon,
-
+    color="gray",
 )
 
 # Create a Divider component
 text_divider = dmc.Divider(
-    label="Prediction Parameters",
+    label=dmc.Text("Prediction Parameters", color="gray", size="lg"),
     labelPosition="center",
     orientation="horizontal",
     size="md",
@@ -58,14 +61,19 @@ text_divider_and_tooltip = dmc.Grid(
 )
 
 # Create a NumberInput component
-id_input = dmc.NumberInput(
-    label=dmc.Text("Customer ID", color="gray", size="sm"),
+customer_id_input = dmc.NumberInput(
+    id="customer-id-input",
+    label=dmc.Text(f"Customer ID", color="gray", size="sm"),
+    icon=DashIconify(icon="material-symbols:person", color="gray", height=20, width=20),
     value=1_000,
     min=1_000,
     max=10_000,
     step=1,
+    required=True,
+    withAsterisk=False,
     style={"width": 250, "margin-top": 20},
 )
+
 
 # Prediction Type radio group
 prediction_type_data = [
@@ -74,8 +82,8 @@ prediction_type_data = [
 ]
 
 prediction_type_radio_group = dmc.RadioGroup(
-    [dmc.Radio(l, value=k) for k, l in prediction_type_data],
-    id="radiogroup-interpolative-extrapolative",
+    [dmc.Radio(l, value=k, color="green") for k, l in prediction_type_data],
+    id="prediction-type-radio-group",
     value="interpolative",
     label=dmc.Text("Prediction Type:", color="gray", size="sm"),
     size="sm",
@@ -89,22 +97,12 @@ date_type_data = [
 ]
 
 date_type_radio_group = dmc.RadioGroup(
-    [dmc.Radio(l, value=k) for k, l in date_type_data],
-    id="radiogroup-date-type",
+    [dmc.Radio(l, value=k, color="green") for k, l in date_type_data],
+    id="date-type-radio-group",
     value="timestamp",
     label=dmc.Text("Date Type:", color="gray", size="sm"),
     size="sm",
     style={"margin-top": 20},
-)
-
-# Create a Time Interval component
-time_interval_input = dmc.NumberInput(
-    label=dmc.Text("Time Interval (hours)", color="gray", size="sm"),
-    value=12,
-    min=1,
-    max=24,
-    step=1,
-    style={"width": 250, "margin-top": 20},
 )
 
 # Start Datetime Picker component
@@ -114,12 +112,18 @@ start_date_picker = dmc.DatePicker(
     minDate=date(2022, 1, 1),
     maxDate=date(2023, 12, 31),
     amountOfMonths=1,
-    dropdownPosition="bottom"
+    dropdownPosition="bottom",
+    required=True,
+    withAsterisk=False,
+    icon=DashIconify(icon="mdi:calendar-outline", color="gray", height=20, width=20),
 )
 
 start_time_picker = dmc.TimeInput(
+    id="start-time-picker",
     label=dmc.Text("", size="sm"),
-    id="start-time-picker"
+    required=True,
+    withAsterisk=False,
+    icon=DashIconify(icon="ph:clock", color="gray", height=20, width=20),
 )
 
 # Combine the Date and Time Pickers
@@ -138,12 +142,18 @@ end_date_picker = dmc.DatePicker(
     minDate=date(2022, 1, 1),
     maxDate=date(2023, 12, 31),
     amountOfMonths=1,
-    dropdownPosition="bottom"
+    dropdownPosition="bottom",
+    required=True,
+    withAsterisk=False,
+    icon=DashIconify(icon="mdi:calendar-outline", color="gray", height=20, width=20),
 )
 
 end_time_picker = dmc.TimeInput(
+    id="end-time-picker",
     label=dmc.Text("", size="sm"),
-    id="end-time-picker"
+    required=True,
+    withAsterisk=False,
+    icon=DashIconify(icon="ph:clock", color="gray", height=20, width=20),
 )
 
 # Combine the Date and Time Pickers
@@ -155,6 +165,18 @@ end_datetime_picker = dmc.Grid(
     style={"margin-top": 20},
 )
 
+# Create a Time Interval component
+time_interval_input = dmc.NumberInput(
+    id="time-interval-input",
+    label=dmc.Text("Time Interval (hours)", color="gray", size="sm"),
+    value=12,
+    min=1,
+    max=24,
+    step=1,
+    required=True,
+    withAsterisk=False,
+    style={"width": 250, "margin-top": 20},
+)
 
 # Create a style dictionary
 main_container_style = {
@@ -173,7 +195,7 @@ prediction_container = html.Div(
         dmc.Container(
             children=[
                 text_divider_and_tooltip,
-                id_input,
+                customer_id_input,
                 prediction_type_radio_group,
                 date_type_radio_group,
                 start_datetime_picker,
@@ -188,33 +210,37 @@ prediction_container = html.Div(
 
 # Create a Reset Button component
 reset_button = dmc.Button(
-    id="reset-button",
-    children=dmc.Text("Reset", weight=500),
+    id="page-7-reset-button",
+    children=dmc.Text("Reset", weight=500, color="green"),
+    color="green",
     variant="outline",
     size="md",
     fullWidth=True,
+    style={"margin-top": 20, "margin-right": 10},
 )
 
 # Create a Submit Button component
 submit_button = dmc.Button(
-    id="submit-button",
+    id="page-7-submit-button",
     children=dmc.Text("Submit", weight=500, color="white"),
+    color="green",
     variant="gradient",
-    gradient={"from": "indigo", "to": "cyan", "deg": 105},
+    gradient={"from": "teal", "to": "lime", "deg": 105},
     size="md",
     fullWidth=True,
+    style={"margin-top": 20, "margin-right": 10},
 )
 
 # Combine the Reset and Submit buttons
 button_group = html.Div(
     [
         dmc.Grid(
-        children=[
-            dmc.Col(reset_button, span=6),
-            dmc.Col(submit_button, span=6),
-        ],
-        style={"margin-top": 20},
-    )
+            children=[
+                dmc.Col(reset_button, span=6),
+                dmc.Col(submit_button, span=6),
+            ],
+            style={"margin-top": 20},
+        )
     ], style={"width": 500, "margin": "auto", "margin-bottom": 25}
 )
 
@@ -225,6 +251,7 @@ layout = html.Div(
     [
         header,
         prediction_container,
-        button_group
+        button_group,
+        modal,
     ],
 )

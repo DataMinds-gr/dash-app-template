@@ -6,8 +6,11 @@ import dash_auth
 
 # Create the app
 app = Dash(__name__)
+
 server = app.server
-app.config.suppress_callback_exceptions = True
+
+
+app.config.suppress_callback_exceptions = False
 
 # Set the app title
 app.title = "DataMinds - Dash App"

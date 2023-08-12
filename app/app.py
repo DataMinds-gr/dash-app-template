@@ -31,7 +31,7 @@ import pages.page_404_not_found as page_404_not_found
 import callbacks.navbar_callbacks
 # import callbacks.page_1_callbacks
 import callbacks.page_2_callbacks
-# import callbacks.page_3_callbacks
+import callbacks.page_3_callbacks
 # import callbacks.page_4_callbacks
 # import callbacks.page_5_callbacks
 import callbacks.page_6_callbacks

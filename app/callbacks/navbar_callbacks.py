@@ -20,6 +20,7 @@ from dash import Input, Output
     Input("url", "pathname"),
 )
 def set_active_page(pathname):
+    # print("Navbar Callback:", pathname)
     if pathname == "/":
         return True, False, False, False, False, False, False
     elif pathname == "/page-2-analytics":
